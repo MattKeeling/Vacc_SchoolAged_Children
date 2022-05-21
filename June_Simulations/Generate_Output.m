@@ -57,14 +57,7 @@ for VACC_LOOP=0:2 % What type of childhood vaccine is deployed
         %%
         clear nALL nDEATHS SYMPTOMS HOSPITALISED nHOSP_AD nCASES PILLAR2
         
-        load Starting_Data
-        load Distributions2.mat
-        Distribution_Symptoms_to_Hospital(1)=0;  % Don't beleive 1 day from Symp to Hosp.
-        Distribution_Symptoms_to_Hospital=Distribution_Symptoms_to_Hospital/sum(Distribution_Symptoms_to_Hospital);
-        load Probabilities_Old.mat
-        
-        load Regional_PP.mat
-        Region_PP(Region_PP==0)=100;
+        load Other_Data.mat
         
         Names={'England','East of England','London','Midlands','North East and Yorkshire','North West','South East','South West','Wales','Scotland','Northern Ireland','United Kingdom'};
         
